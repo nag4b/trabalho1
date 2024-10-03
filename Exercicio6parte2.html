@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Página Principal</h1>
+    <input type="number" id="numeroInput" placeholder="Digite um número">
+    <button onclick="gerarLista()">Gerar Lista</button>
+    <div id="resultado"></div>
+
+    <script>
+        function gerarLista() {
+            const numero = document.getElementById('numeroInput').value;
+            const resultado = document.getElementById('resultado');
+            
+            if (numero === '') {
+                resultado.innerHTML = "Por favor, insira um número válido.";
+            } else {
+                let lista = '<ol>';
+                for (let i = 1; i <= numero; i++) {
+                    lista += `<li>  Ana Gabi</li>`;
+                }
+                lista += '</ol>';
+                resultado.innerHTML = lista;
+            }
+        }
+    </script>
+</body>
+</html>
